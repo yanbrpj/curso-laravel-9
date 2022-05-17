@@ -3,10 +3,19 @@
 @section('title', 'Detalhes')
 
 @section('content')
-<h1>Detalhes do Usuário - {{ $user->name }}</h1>
 
-<ul>
-    <li>{{ $user->name }}</li>
-    <li>{{ $user->email }}</li>
-</ul>
+<div class="container">
+    <div class="row d-flex justify-content-center text-center">
+        <div class="col">
+            <h5>Detalhes do Usuário - {{ $user->name }}</h5>
+            <a href="{{ route('users.index') }}">Inicio</a>
+
+            <ul class="list-group">
+                <li class="list-group-item">{{ $user->name }}</li>
+                <li class="list-group-item">{{ $user->email }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 @endsection
